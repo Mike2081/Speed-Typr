@@ -1,0 +1,188 @@
+.container {
+  position: relative;
+  bottom: 11rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search {
+  position: fixed;
+  top: 0.5rem;
+  left: 50rem;
+}
+
+.score {
+  position: fixed;
+  top: 1rem;
+  left: 113rem;
+  font-size: 1.6rem;
+  color: aliceblue;
+}
+
+.timer {
+  position: fixed;
+  top: 3rem;
+  left: 113rem;
+  font-size: 1.6rem;
+  color: aliceblue;
+}
+
+.retry {
+  top: 2rem;
+  right: 8rem;
+  position: fixed;
+  background-color: dimgray;
+  height: 3rem;
+  width: 7rem;
+  font-size: 1.2rem;
+  color: aliceblue;
+  border: solid 4px;
+  border-radius: 6px;
+}
+
+.back {
+  background-color: dimgray;
+  position: fixed;
+  background-size: cover;
+  z-index: -1;
+  min-width: 120rem;
+  min-height: 71rem;
+  bottom: 0rem;
+}
+
+.textBar {
+  height: 4rem;
+  width: 17rem;
+  font-size: 2rem;
+  border-radius: 12px;
+}
+
+@-webkit-keyframes move {
+  100% {
+    -webkit-transform: translateY(1040px);
+            transform: translateY(1040px);
+  }
+}
+
+@keyframes move {
+  100% {
+    -webkit-transform: translateY(1040px);
+            transform: translateY(1040px);
+  }
+}
+
+.chop {
+  -webkit-animation: move 17000ms linear;
+          animation: move 17000ms linear;
+  color: aliceblue;
+}
+
+.smelly {
+  -webkit-animation: move 10900ms linear;
+          animation: move 10900ms linear;
+  color: aliceblue;
+}
+
+.untidy {
+  -webkit-animation: move 12000ms linear;
+          animation: move 12000ms linear;
+  color: aliceblue;
+}
+
+.selection {
+  -webkit-animation: move 11300ms linear;
+          animation: move 11300ms linear;
+  color: aliceblue;
+}
+
+.letter {
+  -webkit-animation: move 8600ms linear;
+          animation: move 8600ms linear;
+  color: aliceblue;
+}
+
+.friction {
+  -webkit-animation: move 8000ms linear;
+          animation: move 8000ms linear;
+  color: aliceblue;
+}
+
+.guess {
+  -webkit-animation: move 9999ms linear;
+          animation: move 9999ms linear;
+  color: aliceblue;
+}
+
+.middle {
+  -webkit-animation: move 9150ms linear;
+          animation: move 9150ms linear;
+  color: aliceblue;
+}
+
+.sister {
+  -webkit-animation: move 15000ms linear;
+          animation: move 15000ms linear;
+  color: aliceblue;
+}
+
+.zealous {
+  -webkit-animation: move 11000ms linear;
+          animation: move 11000ms linear;
+  color: aliceblue;
+}
+
+.tense {
+  -webkit-animation: move 9050ms linear;
+          animation: move 9050ms linear;
+  color: aliceblue;
+}
+
+.precede {
+  -webkit-animation: move 8000ms linear;
+          animation: move 8000ms linear;
+  color: aliceblue;
+}
+
+.cherry {
+  -webkit-animation: move 8300ms linear;
+          animation: move 8300ms linear;
+  color: aliceblue;
+}
+
+.fantastic {
+  -webkit-animation: move 10000ms linear;
+          animation: move 10000ms linear;
+  color: aliceblue;
+}
+
+.steady {
+  -webkit-animation: move 18000ms linear;
+          animation: move 18000ms linear;
+  color: aliceblue;
+}
+
+.wine {
+  -webkit-animation: move 13000ms linear;
+          animation: move 13000ms linear;
+  color: aliceblue;
+}
+
+.hurry {
+  -webkit-animation: move 8300ms linear;
+          animation: move 8300ms linear;
+  color: aliceblue;
+}
+
+.previous {
+  -webkit-animation: move 16000ms linear;
+          animation: move 16000ms linear;
+  color: aliceblue;
+}
+
+.practice {
+  -webkit-animation: move 8000ms linear;
+          animation: move 8000ms linear;
+  color: aliceblue;
+}
+/*# sourceMappingURL=Page.css.map */

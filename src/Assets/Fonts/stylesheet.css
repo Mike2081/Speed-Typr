@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'SummerFire';
+    src: url('../Fonts/SummerFire.eot') format('embedded-opentype');
+    src: url('../Fonts/SummerFire.eot?#iefix') format('embedded-opentype'),
+        url('../Fonts/SummerFire.woff2') format('woff2'),
+        url('../Fonts/SummerFire.woff') format('woff'),
+        url('../Fonts/SummerFire.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

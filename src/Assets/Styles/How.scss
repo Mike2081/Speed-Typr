@@ -1,0 +1,43 @@
+.color{
+    background-color: dimgray;
+    position: fixed;
+    background-size: cover;
+    z-index: -1;
+    min-width: 120rem;
+    min-height: 71rem;
+    bottom: 0rem;
+    right: .009rem;
+}
+
+.home{
+    position: relative;
+    top: 2rem;
+    background-color: dimgray;
+    height: 5rem;
+    width: 13rem;
+    font-size: 3.2rem;
+    color: aliceblue;
+    border: solid 4px;
+    border-radius: 6px;
+}
+
+.how-title{
+    position: relative;
+    top: 6rem;
+    color: aliceblue;
+    font-size: 4rem;
+}
+
+.info{
+    color: aliceblue;
+    border: solid 4px;
+    border-radius: 6px;
+    position: relative;
+    width: 64rem;
+    height: 15rem;
+    top: 8rem;
+    left: 26rem;
+    font-size: 4rem;
+    padding: 2.5rem;
+
+}
