@@ -4,7 +4,6 @@ import '../Styles/App.css';
 import Page from '../Javascript/Page.js'
 import How from './How'
 import { BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
-
 class App extends Component {
   render() {
     return (

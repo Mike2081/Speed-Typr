@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../Styles/How.scss';
 import { Link } from 'react-router-dom';
-
 export default class How extends Component {
   render() {
     return (
