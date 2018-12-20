@@ -6,32 +6,24 @@ export default class Page extends Component {
         super();
         this.input = React.createRef();
         this.state = { 
-            words:[
-            'chop',
-            'smelly',
-            'untidy',
-            'selection',
-            'letter',
-            'friction',
-            'guess',
-            'middle',
-            'sister',
-            'zealous',
-            'tense',
-            'precede',
-            'cherry',
-            'fantastic',
-            'steady',
-            'wine',
-            'hurry',
-            'previous',
-            'practice',
-        ],
+            words:[],
             input: '',
             score:0,
-            count: 20
+            count: 20,
         }
     };
+
+    //fetch call
+    getWords = () => {
+        fetch("http://localhost:8080//words-array")
+        .then(response => response.json())
+        .then(data =>{
+            this.setState({
+                words: data
+            });
+        });
+    };
+
     handleChange = (e) =>{
         this.setState({
             input:e.target.value
