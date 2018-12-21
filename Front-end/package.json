@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.16.4",
     "node-sass": "^4.10.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
@@ -24,5 +25,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy":"http://localhost:3000"
+  "proxy": "http://localhost:3000"
 }

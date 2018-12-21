@@ -5,23 +5,35 @@ export default class Page extends Component {
     constructor(){
         super();
         this.input = React.createRef();
+        // mounted = true;
         this.state = { 
             words:[],
             input: '',
             score:0,
-            count: 20,
+            count: 1000000000000000000000,
+            error:null
         }
     };
-
     //fetch call
-    getWords = () => {
-        fetch("http://localhost:8080//words-array")
-        .then(response => response.json())
-        .then(data =>{
-            this.setState({
-                words: data
-            });
-        });
+    componentDidMount() {
+        fetch("http://localhost:8080/page")
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+              throw new Error('problem fetching data')
+            }
+        })
+        .then(data => {
+            if (this.mounted) {
+                this.setState({
+                    words: data
+                });
+            }
+        })
+        // .catch(fetchError =>{
+
+        // })
     };
 
     handleChange = (e) =>{
@@ -72,7 +84,7 @@ export default class Page extends Component {
       componentWillUnmount () {
         clearInterval(this.interval)
       };
-    render() {      
+    render() { 
     return (
       <div className='container'>
         {this.state.words.map(item =>{
