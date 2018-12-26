@@ -5,7 +5,6 @@ export default class Page extends Component {
     constructor(){
         super();
         this.input = React.createRef();
-        // mounted = true;
         this.state = { 
             words:[],
             input: '',
@@ -15,26 +14,17 @@ export default class Page extends Component {
         }
     };
     //fetch call
-    componentDidMount() {
+    componentDidMount(){
         fetch("http://localhost:8080/page")
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            } else {
-              throw new Error('problem fetching data')
-            }
-        })
-        .then(data => {
-            if (this.mounted) {
-                this.setState({
-                    words: data
-                });
-            }
-        })
-        // .catch(fetchError =>{
-
-        // })
-    };
+        .then(response => response.json())
+        .then(data =>{
+            console.log(data);
+            this.setState({
+                words: data,
+            });
+            
+        });
+    }
 
     handleChange = (e) =>{
         this.setState({
@@ -60,12 +50,12 @@ export default class Page extends Component {
             })
         }       
     };
-    componentDidMount () {
-        this.setState({
-          count: this.state.count
-        })
-        this.doIntervalChange()
-      }
+    // componentDidMount () {
+    //     this.setState({
+    //       count: this.state.count
+    //     })
+    //     this.doIntervalChange()
+    //   }
       doIntervalChange = () => {
         this.interval = setInterval(
             () => {
@@ -89,7 +79,7 @@ export default class Page extends Component {
       <div className='container'>
         {this.state.words.map(item =>{
             return <h1 className = {item}>
-                        {item}
+                        {item.words}
                     </h1>
         })}
         <div className='score'>

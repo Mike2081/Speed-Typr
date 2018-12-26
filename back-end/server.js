@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const wordsStuff = require('./wordsStuff');
+const randomWords = require('random-words');
 app.use(express.static('public'));
 app.use(bodyParser());
 app.all('/*', function(req, res, next) {
@@ -11,7 +12,7 @@ app.all('/*', function(req, res, next) {
   next();
 });
 app.get('/page', (req, res) =>{
-    res.json(wordsStuff);
+    res.json(randomWords({min:16, max:16}));
   });
   app.listen(8080, () => {
     console.log('server runnning!');
