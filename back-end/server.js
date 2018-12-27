@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const wordsStuff = require('./wordsStuff');
 const randomWords = require('random-words');
 app.use(express.static('public'));
 app.use(bodyParser());

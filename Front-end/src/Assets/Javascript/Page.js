@@ -13,8 +13,7 @@ export default class Page extends Component {
             error:null
         }
     };
-    //fetch call
-    componentDidMount(){
+    wordsFetch = () => {
         fetch("http://localhost:8080/page")
         .then(response => response.json())
         .then(data =>{
@@ -24,8 +23,7 @@ export default class Page extends Component {
             });
             
         });
-    }
-
+    };
     handleChange = (e) =>{
         this.setState({
             input:e.target.value
@@ -50,12 +48,14 @@ export default class Page extends Component {
             })
         }       
     };
-    // componentDidMount () {
-    //     this.setState({
-    //       count: this.state.count
-    //     })
-    //     this.doIntervalChange()
-    //   }
+    componentDidMount () {
+        this.setState({
+          count: this.state.count
+        })
+        this.doIntervalChange();
+        //fetch call
+        this.wordsFetch();
+      }
       doIntervalChange = () => {
         this.interval = setInterval(
             () => {
@@ -79,7 +79,7 @@ export default class Page extends Component {
       <div className='container'>
         {this.state.words.map(item =>{
             return <h1 className = {item}>
-                        {item.words}
+                        {item}
                     </h1>
         })}
         <div className='score'>
