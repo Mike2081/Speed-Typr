@@ -1,9 +1,61 @@
 .container {
   position: relative;
-  bottom: 11rem;
+  bottom: -15rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: aliceblue;
+  font-size: 0.8rem;
+}
+
+.container__words {
+  -webkit-animation: move 17000ms linear;
+          animation: move 17000ms linear;
+}
+
+.container__words2 {
+  -webkit-animation: move 10900ms linear;
+          animation: move 10900ms linear;
+}
+
+.container__words3 {
+  -webkit-animation: move 12000ms linear;
+          animation: move 12000ms linear;
+}
+
+.container__words4 {
+  -webkit-animation: move 11300ms linear;
+          animation: move 11300ms linear;
+}
+
+.container__words5 {
+  -webkit-animation: move 8600ms linear;
+          animation: move 8600ms linear;
+}
+
+.container__words6 {
+  -webkit-animation: move 8000ms linear;
+          animation: move 8000ms linear;
+}
+
+.container__words7 {
+  -webkit-animation: move 9999ms linear;
+          animation: move 9999ms linear;
+}
+
+.container__words8 {
+  -webkit-animation: move 9150ms linear;
+          animation: move 9150ms linear;
+}
+
+.container__words9 {
+  -webkit-animation: move 15000ms linear;
+          animation: move 15000ms linear;
+}
+
+.container__words10 {
+  -webkit-animation: move 11000ms linear;
+          animation: move 11000ms linear;
 }
 
 .search {
@@ -15,7 +67,7 @@
 .score {
   position: fixed;
   top: 1rem;
-  left: 113rem;
+  left: 83rem;
   font-size: 1.6rem;
   color: aliceblue;
 }
@@ -23,14 +75,14 @@
 .timer {
   position: fixed;
   top: 3rem;
-  left: 113rem;
+  left: 81rem;
   font-size: 1.6rem;
   color: aliceblue;
 }
 
 .retry {
   top: 2rem;
-  right: 8rem;
+  right: 12rem;
   position: fixed;
   background-color: dimgray;
   height: 3rem;
@@ -46,7 +98,7 @@
   position: fixed;
   background-size: cover;
   z-index: -1;
-  min-width: 120rem;
+  min-width: 90rem;
   min-height: 71rem;
   bottom: 0rem;
 }
@@ -70,66 +122,6 @@
     -webkit-transform: translateY(1040px);
             transform: translateY(1040px);
   }
-}
-
-.item {
-  -webkit-animation: move 17000ms linear;
-          animation: move 17000ms linear;
-  color: aliceblue;
-}
-
-.two {
-  -webkit-animation: move 10900ms linear;
-          animation: move 10900ms linear;
-  color: aliceblue;
-}
-
-.three {
-  -webkit-animation: move 12000ms linear;
-          animation: move 12000ms linear;
-  color: aliceblue;
-}
-
-.selection {
-  -webkit-animation: move 11300ms linear;
-          animation: move 11300ms linear;
-  color: aliceblue;
-}
-
-.letter {
-  -webkit-animation: move 8600ms linear;
-          animation: move 8600ms linear;
-  color: aliceblue;
-}
-
-.friction {
-  -webkit-animation: move 8000ms linear;
-          animation: move 8000ms linear;
-  color: aliceblue;
-}
-
-.guess {
-  -webkit-animation: move 9999ms linear;
-          animation: move 9999ms linear;
-  color: aliceblue;
-}
-
-.middle {
-  -webkit-animation: move 9150ms linear;
-          animation: move 9150ms linear;
-  color: aliceblue;
-}
-
-.sister {
-  -webkit-animation: move 15000ms linear;
-          animation: move 15000ms linear;
-  color: aliceblue;
-}
-
-.zealous {
-  -webkit-animation: move 11000ms linear;
-          animation: move 11000ms linear;
-  color: aliceblue;
 }
 
 .tense {

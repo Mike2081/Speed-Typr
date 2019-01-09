@@ -6,7 +6,7 @@ export default class How extends Component {
     return (
       <div>
         <Link to={'/start'}>
-          <button className='home'>
+          <button className='home-button'>
             Home
           </button>  
         </Link>  

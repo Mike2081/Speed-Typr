@@ -11,8 +11,8 @@ app.all('/*', function(req, res, next) {
   next();
 });
 app.get('/page', (req, res) =>{
-    res.json(randomWords({min:16, max:16}));
+    res.json(randomWords({min:1, max:1}));
   });
-  app.listen(8080, () => {
-    console.log('server runnning!');
-  });
+app.listen(8080, () => {
+  console.log('server runnning!');
+});
