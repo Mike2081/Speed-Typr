@@ -34,6 +34,12 @@
         &__words10{
             animation:move 11000ms linear ;
         }
+        &__words11{
+            animation:move 9050ms linear ;
+        }
+        &__words12{
+            animation:move 8000ms linear ;
+        }
     
 }
 
@@ -93,16 +99,6 @@
 @keyframes move{
     100%{transform:translateY(1040px);}
   }
-
-.tense{
-    animation:move 9050ms linear;
-    color: aliceblue;
-}
-
-.precede{
-    animation:move 8000ms linear;
-    color: aliceblue;
-}
 
 .cherry{
     animation:move 8300ms linear;

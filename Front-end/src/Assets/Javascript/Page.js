@@ -16,6 +16,8 @@ export default class Page extends Component {
             words8:[],
             words9:[],
             words10:[],
+            words11:[],
+            words12:[],
             input: '',
             score:0,
             count: 9999,
@@ -33,9 +35,11 @@ export default class Page extends Component {
             fetch('http://localhost:8080/page'),
             fetch('http://localhost:8080/page'),
             fetch('http://localhost:8080/page'),
+            fetch('http://localhost:8080/page'),
+            fetch('http://localhost:8080/page'),
         ])
-        .then(([res1, res2, res3, res4, res5, res6, res7, res8, res9, res10, ]) => Promise.all([res1.json(), res2.json(), res3.json(), res4.json(), res5.json(), res6.json(), res7.json(), res8.json(), res9.json(), res10.json()]))
-        .then(([data1, data2, data3, data4, data5, data6, data7, data8, data9, data10, ]) => this.setState({
+        .then(([res1, res2, res3, res4, res5, res6, res7, res8, res9, res10, res11, res12]) => Promise.all([res1.json(), res2.json(), res3.json(), res4.json(), res5.json(), res6.json(), res7.json(), res8.json(), res9.json(), res10.json(), res11.json(), res12.json()]))
+        .then(([data1, data2, data3, data4, data5, data6, data7, data8, data9, data10, data11, data12]) => this.setState({
             words: data1, 
             words2: data2,
             words3: data3,
@@ -46,6 +50,8 @@ export default class Page extends Component {
             words8: data8,
             words9: data9,
             words10: data10,
+            words11: data11,
+            words12: data12,
         }));
     }
     handleChange = (e) =>{
@@ -70,7 +76,9 @@ export default class Page extends Component {
         let newArray7 = this.state.words7.filter(e => e !== inputWord);
         let newArray8 = this.state.words8.filter(e => e !== inputWord);
         let newArray9 = this.state.words9.filter(e => e !== inputWord);
-        let newArray10 = this.state.words9.filter(e => e !== inputWord);
+        let newArray10 = this.state.words10.filter(e => e !== inputWord);
+        let newArray11 = this.state.words11.filter(e => e !== inputWord);
+        let newArray12 = this.state.words12.filter(e => e !== inputWord);
             this.setState({
                     words: newArray,
                     words2: newArray2,
@@ -82,6 +90,8 @@ export default class Page extends Component {
                     words8: newArray8,
                     words9: newArray9,
                     words10: newArray10,
+                    words11: newArray11,
+                    words12: newArray12,
                 }) 
                 this.clearInput();
         if(this.state.words.indexOf(inputWord) > -1){
@@ -133,7 +143,17 @@ export default class Page extends Component {
             this.setState({
                 score: this.state.score+1,
             })
-        }                 
+        }
+        if(this.state.words11.indexOf(inputWord) > -1){
+            this.setState({
+                score: this.state.score+1,
+            })
+        }
+        if(this.state.words12.indexOf(inputWord) > -1){
+            this.setState({
+                score: this.state.score+1,
+            })
+        }                      
     };
     componentDidMount () {
         this.setState({
@@ -152,7 +172,7 @@ export default class Page extends Component {
                 }))
               } else {
                 clearInterval(this.interval)
-                alert('GAME OVER' + '                                                                            ' + 'SCORE:' + this.state.score)
+                alert('GAME OVER' + '' + 'SCORE:' + this.state.score)
               }
             },
             1000
@@ -234,6 +254,20 @@ export default class Page extends Component {
                             </h1>
                 })}
             </div>
+            <div className ='container__words11'>
+                {this.state.words11.map(item =>{
+                    return <h1>
+                                {item}
+                            </h1>
+                })}
+            </div>
+            <div className ='container__words12'>
+                {this.state.words12.map(item =>{
+                    return <h1>
+                                {item}
+                            </h1>
+                })}
+            </div>
             <div className='score'>
                 Score:{this.state.score}
             </div>
@@ -252,14 +286,6 @@ export default class Page extends Component {
     )
   }
 }
-
-{/* <div className ='container__words'>
-                {this.state.words.map(item =>{
-                    return <h1 className = {item}>
-                                {item}
-                            </h1>
-                })}
-            </div>   */}
 
 
 

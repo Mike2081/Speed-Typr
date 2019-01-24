@@ -58,6 +58,16 @@
           animation: move 11000ms linear;
 }
 
+.container__words11 {
+  -webkit-animation: move 9050ms linear;
+          animation: move 9050ms linear;
+}
+
+.container__words12 {
+  -webkit-animation: move 8000ms linear;
+          animation: move 8000ms linear;
+}
+
 .search {
   position: fixed;
   top: 0.5rem;
@@ -122,18 +132,6 @@
     -webkit-transform: translateY(1040px);
             transform: translateY(1040px);
   }
-}
-
-.tense {
-  -webkit-animation: move 9050ms linear;
-          animation: move 9050ms linear;
-  color: aliceblue;
-}
-
-.precede {
-  -webkit-animation: move 8000ms linear;
-          animation: move 8000ms linear;
-  color: aliceblue;
 }
 
 .cherry {
