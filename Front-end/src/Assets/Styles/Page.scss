@@ -1,9 +1,12 @@
 .container{
     position: relative;
-    bottom: -15rem;
+    bottom: 1rem;
     display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
     color: aliceblue;
-    font-size: 0.8rem;
+    font-size: 0.7vw;
         &__words{
             animation:move 17000ms linear ;
         }
@@ -40,13 +43,27 @@
         &__words12{
             animation:move 8000ms linear ;
         }
+        &__words13{
+            animation:move 8300ms linear ;
+        }
+        &__words14{
+            animation:move 10000ms linear ;
+        }
+        &__words15{
+            animation:move 17000ms linear ;
+        }
+        &__words16{
+            animation:move 13000ms linear ;
+        }
     
 }
 
 .search{
+    left: 33%;
+    width: 31%;
+    height: 50%;
+    top: 1%;
     position: fixed;
-    top: 0.5rem;
-    left: 50rem;
 }
 
 .score{
@@ -90,35 +107,17 @@
 }
 
 .textBar{
-    height: 4rem;
-    width: 17rem;
-    font-size: 2rem;
-    border-radius: 12px;
+    height: auto;
+    width: 100%;
+    font-size: 3vw;
+    border-radius: 19px;
+    position: relative;
+    justify-content: center;
 }
 
 @keyframes move{
     100%{transform:translateY(1040px);}
   }
-
-.cherry{
-    animation:move 8300ms linear;
-    color: aliceblue;
-}
-
-.fantastic{
-    animation:move 10000ms linear;
-    color: aliceblue;
-}
-
-.steady{
-    animation:move 18000ms linear;
-    color: aliceblue;
-}
-
-.wine{
-    animation:move 13000ms linear;
-    color: aliceblue;
-}
 
 .hurry{
     animation:move 8300ms linear;

@@ -1,11 +1,16 @@
 .container {
   position: relative;
-  bottom: -15rem;
+  bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  height: auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   color: aliceblue;
-  font-size: 0.8rem;
+  font-size: 0.7vw;
 }
 
 .container__words {
@@ -68,10 +73,32 @@
           animation: move 8000ms linear;
 }
 
+.container__words13 {
+  -webkit-animation: move 8300ms linear;
+          animation: move 8300ms linear;
+}
+
+.container__words14 {
+  -webkit-animation: move 10000ms linear;
+          animation: move 10000ms linear;
+}
+
+.container__words15 {
+  -webkit-animation: move 17000ms linear;
+          animation: move 17000ms linear;
+}
+
+.container__words16 {
+  -webkit-animation: move 13000ms linear;
+          animation: move 13000ms linear;
+}
+
 .search {
+  left: 33%;
+  width: 31%;
+  height: 50%;
+  top: 1%;
   position: fixed;
-  top: 0.5rem;
-  left: 50rem;
 }
 
 .score {
@@ -114,10 +141,14 @@
 }
 
 .textBar {
-  height: 4rem;
-  width: 17rem;
-  font-size: 2rem;
-  border-radius: 12px;
+  height: auto;
+  width: 100%;
+  font-size: 3vw;
+  border-radius: 19px;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @-webkit-keyframes move {
@@ -132,30 +163,6 @@
     -webkit-transform: translateY(1040px);
             transform: translateY(1040px);
   }
-}
-
-.cherry {
-  -webkit-animation: move 8300ms linear;
-          animation: move 8300ms linear;
-  color: aliceblue;
-}
-
-.fantastic {
-  -webkit-animation: move 10000ms linear;
-          animation: move 10000ms linear;
-  color: aliceblue;
-}
-
-.steady {
-  -webkit-animation: move 18000ms linear;
-          animation: move 18000ms linear;
-  color: aliceblue;
-}
-
-.wine {
-  -webkit-animation: move 13000ms linear;
-          animation: move 13000ms linear;
-  color: aliceblue;
 }
 
 .hurry {
