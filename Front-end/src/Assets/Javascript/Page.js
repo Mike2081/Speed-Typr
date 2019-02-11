@@ -25,7 +25,7 @@ export default class Page extends Component {
             words16:[],
             input: '',
             score:0,
-            count: 9999,
+            count: 30,
         }
     };
     wordsFetch = () => {
@@ -227,7 +227,7 @@ export default class Page extends Component {
                 }))
               } else {
                 clearInterval(this.interval)
-                alert('GAME OVER' + '' + 'SCORE:' + this.state.score)
+                alert('GAME OVER' + '                                                                            ' + 'SCORE:' + this.state.score)
               }
             },
             1000
@@ -362,7 +362,7 @@ export default class Page extends Component {
             </Link>
             <div className='back'>
                 <form className='search' onSubmit={(event)=>this.handlekey(event)} onChange={this.handleChange}>
-                    <input className = 'textBar' type ="reset" type='text' ref={this.input} value={this.state.input} />
+                    <input className = 'textBar' type='text' autoFocus ref={this.input} value={this.state.input} />
                 </form>
             </div>
       </div>

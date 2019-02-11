@@ -14,7 +14,7 @@ export default class How extends Component {
           How to play
         </div>
         <div className='info'>
-          Double click the start button and type as many words as you can before the timer runs out!
+        Click the start button to start game! Type and enter as many words as you can before the timer runs out!
         </div>
         <div className='color'></div>
       </div>
