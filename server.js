@@ -1,4 +1,3 @@
-const PORT = process.env.PORT || 3000;
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
@@ -14,6 +13,6 @@ app.all('/*', function(req, res, next) {
 app.get('/page', (req, res) =>{
     res.json(randomWords({min:1, max:1}));
   });
-app.listen(8080, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log('server runnning!');
 });
