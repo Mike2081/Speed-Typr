@@ -1,4 +1,5 @@
 const express = require('express');
+const port = process.env.PORT || 8080;
 const bodyParser = require('body-parser');
 const app = express();
 const randomWords = require('random-words');
@@ -14,7 +15,7 @@ app.get('/*', (req, res) =>{
     res.json(randomWords({min:1, max:1}));
   });
 app.listen(8080, () => {
-    console.log('server runnning!');
+    console.log('server runnning on port 8080!');
   });
 app.set('port', process.env.PORT || 3000);
 
