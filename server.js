@@ -10,9 +10,14 @@ app.all('/*', function(req, res, next) {
   res.header("Access-Control-Allow-Methods: GET, POST, HEAD, OPTIONS, PUT, DELETE");
   next();
 });
-app.get('/page', (req, res) =>{
+app.get('/*', (req, res) =>{
     res.json(randomWords({min:1, max:1}));
   });
-app.listen(process.env.PORT || 5000, () => {
-  console.log('server runnning!');
-});
+app.listen(8080, () => {
+    console.log('server runnning!');
+  });
+app.set('port', process.env.PORT || 3000);
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('back-end/Front=end'));
+}
