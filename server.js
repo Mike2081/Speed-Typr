@@ -3,7 +3,7 @@ const port = process.env.PORT || 8080;
 const bodyParser = require('body-parser');
 const app = express();
 const randomWords = require('random-words');
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser());
 app.all('/*', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -17,7 +17,3 @@ app.get('/*', (req, res) =>{
 app.listen(process.env.PORT || 3000, function(){
     console.log('server runnning on http!');
   });
-
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('back-end/Front=end'));
-}
