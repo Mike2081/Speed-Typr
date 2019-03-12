@@ -3,7 +3,8 @@ const port = process.env.PORT || 8080;
 const bodyParser = require('body-parser');
 const app = express();
 const randomWords = require('random-words');
-app.use(express.static(path.join(__dirname, 'App')));
+const path = require('path'); 
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser());
 app.all('/*', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
