@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Start from './Start.js'
+import Start from 'Start.js'
 import '../Styles/App.css';
 import Page from '../Javascript/Page.js'
-import How from './How'
+import How from 'How.js'
 import { BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 class App extends Component {
   render() {
