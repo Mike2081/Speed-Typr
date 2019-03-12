@@ -14,10 +14,11 @@ app.all('/*', function(req, res, next) {
 app.get('/*', (req, res) =>{
     res.json(randomWords({min:1, max:1}));
   });
-app.listen(8080, () => {
-    console.log('server runnning on port 8080!');
+app.listen(process.env.PORT || 3000, function(){
+  const host = server.address().address;
+  const port = server.address().port;
+    console.log('server runnning on http!');
   });
-app.set('port', process.env.PORT || 3000);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('back-end/Front=end'));
