@@ -15,8 +15,6 @@ app.get('/*', (req, res) =>{
     res.json(randomWords({min:1, max:1}));
   });
 app.listen(process.env.PORT || 3000, function(){
-  const host = server.address().address;
-  const port = server.address().port;
     console.log('server runnning on http!');
   });
 
