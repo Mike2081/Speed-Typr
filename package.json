@@ -2,26 +2,23 @@
   "name": "capstone",
   "version": "0.1.0",
   "private": true,
-  "main": "app.js",
   "dependencies": {
     "express": "^4.16.4",
     "node-sass": "^4.10.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1",
-    "random-words": "1.1.0"
+    "react-scripts": "2.1.1"
   },
   "scripts": {
-    "start": "node server",
-    "heroku-postbuild": "cd react-ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "engines": {
-    "node": "10.9.0",
-    "npm": "6.2.0"
   },
   "browserslist": [
     ">0.2%",
