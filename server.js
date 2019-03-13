@@ -5,7 +5,9 @@ const app = express();
 const randomWords = require('random-words');
 const path = require('path'); 
 app.use(express.static(path.join(__dirname, 'App')));
-app.use(bodyParser());
+app.use(bodyParser.urlencoded());
+app.use(bodyParser.json());
+// Must add cause heroku dissproves 'app.use(bodyParser.urlencoded)'. You must call the methods separately
 app.all('/*', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
