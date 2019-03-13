@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const randomWords = require('random-words');
 const path = require('path'); 
-app.use(express.static(path.join(__dirname, 'App')));
+app.use(express.static(path.join(__dirname, 'public/index.html')));
 app.use(bodyParser.json());
 // Must add cause heroku dissproves 'app.use(bodyParser.urlencoded)'. You must call the methods separately
 app.use(bodyParser.urlencoded({
