@@ -2,7 +2,11 @@
 	"name": "Speed-Typr",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+  "main": "index.js",
+  "engines": {
+    "node": "v11.4.0",
+    "npm": "6.4.1"
+  },
 	"dependencies": {
 		"body-parser": "^1.18.3",
 		"express": "^4.16.4",
