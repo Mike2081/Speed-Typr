@@ -9,6 +9,11 @@ app.get('/page', (req, res) => {
 	res.json(randomWords({ min: 1, max: 1 }));
 });
 
+// ^ Needed so the url can be set to heroku's url
+app.use(express.static(path.resolve(__dirname, '../frontEnd/build')));
+app.get('*', (req, res) => {
+	res.sendFile(path.resolve(__dirname, './frontEnd/build', 'index.html'));
+});
 app.use(bodyParser());
 app.all('/*', function(req, res, next) {
 	res.header('Access-Control-Allow-Origin', '*');
@@ -17,12 +22,6 @@ app.all('/*', function(req, res, next) {
 		'Access-Control-Allow-Methods: GET, POST, HEAD, OPTIONS, PUT, DELETE'
 	);
 	next();
-});
-// ^ Needed so the url can be set to heroku's url
-
-app.use(express.static(path.resolve(__dirname, '../front-end/build')));
-app.get('*', (req, res) => {
-	res.sendFile(path.resolve(__dirname, './front-end/build', 'index.html'));
 });
 // ^ Folder setup for heroku
 app.listen(PORT, () => {
