@@ -25,7 +25,7 @@ export default class Page extends Component {
 			words16: [],
 			input: '',
 			score: 0,
-			count: 30
+			count: 15
 		};
 	}
 	wordsFetch = () => {
